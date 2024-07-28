@@ -146,11 +146,11 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         // (5) Extrude 3 PLAY(2.00) did not regenerate properly: Select face or sketch region to extrude.<br>2 missing selections
         console.log('Right-clicking on the specified element.');
         const editOptions9 = await performRightClickOptionByTitle(newPage, selector9, title9);
-        console.log(editOptions8);
+        console.log(editOptions9);
         console.log("SSSSSSSSSSS");
         await waitForEnter();
         console.log("TTTTTTTTTTT");
-        editIntoSketchFunction(editOptions8, newPage);
+        editIntoSketchFunction(editOptions9, newPage);
         ////////////////////////////////////////////////////////////////////////////
 
         console.log("UUUUUUUUUUU");
