@@ -1,4 +1,4 @@
-// July 25th
+// July 28th
 
 const puppeteer = require('puppeteer');
 require('dotenv').config();
@@ -60,8 +60,6 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         console.log("GGGGGGGGGGGG");
         await waitForEnter();
         console.log("HHHHHHHHHH");
-        // Perform the edit function
-        // Perform right-click on the specified element
         const selector7 = 'div[data-id="AJC+8X/uU1MWWXEK"]'; // Replace with the appropriate selector
         const title7 = '(3) Extrude Sketch(1.03) did not regenerate properly: Select a sketch plane.<br>1 missing selection'; // Replace with the desired title
         console.log('Right-clicking on the specified element.');
@@ -77,7 +75,6 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         editIntoSketchFunction(editOptions7, newPage);
 
 
-
         console.log("KKKKKKKKKKKKKK");
         await waitForEnter();
         console.log("LLLLLLLLLLLLL");
@@ -86,6 +83,7 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         ///////WORKING, NEED TO CHANGE THE (3) Extrude Sketch(1.03)
         await newPage.keyboard.press('Enter');
         console.log('await newPage.keyboard.press')
+
 
         //Select index
         const desiredIndex8 = 8;
@@ -102,8 +100,6 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         console.log('Right-clicking on the specified element.');
         const editOptions8 = await performRightClickOptionByTitle(newPage, selector8, title8);
         console.log(editOptions8);
-
-
         console.log("OOOOOOOOOO");
         await waitForEnter();
         console.log("PPPPPPPPPP");
@@ -113,8 +109,8 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
         // Use the retrieved options for further actions (e.g., copySketchFunction)
-        console.log('copySketchFunction')
-        copySketchFunction(editOptions3, newPage);
+        // console.log('copySketchFunction')
+        // copySketchFunction(editOptions3, newPage);
 
 
         // Select sketch to click or unclick, good code to select and unselect
@@ -135,6 +131,32 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         console.log("QQQQQQQQQQQ");
         await waitForEnter();
         console.log("RRRRRRRRRRR");
+
+
+
+        //Working on (5) Extrude 3 PLAY(2.00)
+        ////////////////////////////////////////////////////////////////////////////
+        // const selector9 = 'div[data-id="mypaWa+39o7YTdnA"]'; // Replace with the appropriate selector
+        const selector9 = 'div[data-id="zUc3/N14UtKVlcJg"]'; // Replace with the appropriate selector
+
+        // zUc3/N14UtKVlcJg
+        // const title9 = '(4) Extrude 2 did not regenerate properly: No merge scope selected.<br>1 missing selection';
+        const title9 = '(5) Extrude 3 PLAY(2.00) did not regenerate properly: Select face or sketch region to extrude.<br>2 missing selections';
+
+        // (5) Extrude 3 PLAY(2.00) did not regenerate properly: Select face or sketch region to extrude.<br>2 missing selections
+        console.log('Right-clicking on the specified element.');
+        const editOptions9 = await performRightClickOptionByTitle(newPage, selector9, title9);
+        console.log(editOptions8);
+        console.log("SSSSSSSSSSS");
+        await waitForEnter();
+        console.log("TTTTTTTTTTT");
+        editIntoSketchFunction(editOptions8, newPage);
+        ////////////////////////////////////////////////////////////////////////////
+
+        console.log("UUUUUUUUUUU");
+        await waitForEnter();
+        console.log("VVVVVVVVVVV");
+
 
 
         // Select sketch to click or unclick again
@@ -230,9 +252,6 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
 
-
-
-
         //MOVING TO THE THIRD SKETCH
         console.log('moving to the third sketch')
         //ALL THE CODE TOGETHER
@@ -293,11 +312,11 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         console.log('Waiting 5 seconds.');
         await clickButtonByIndex(newPage, desiredIndex9);
         //Right click option
-        const selector9 = 'div[data-id="yyHiDTMWflCzpmJN"]'; // Replace with the appropriate selector
+        const selector10 = 'div[data-id="yyHiDTMWflCzpmJN"]'; // Replace with the appropriate selector
         // const selector8 = 'div[data-id="AJC+8X/uU1MWWXEK"]'; // Replace with the appropriate selector
-        const title9 = 'Third Sketch'; // Replace with the desired title
-        const editOptions9 = await performRightClickOptionByTitle(newPage, selector9, title9);
-        console.log(editOptions9);
+        const title10 = 'Third Sketch'; // Replace with the desired title
+        const editOptions10 = await performRightClickOptionByTitle(newPage, selector10, title10);
+        console.log(editOptions10);
         //Paste into sketch function
         //TODO: THE CORE RUNS BECAUSE WE MADE IT RUN FOR 40 SECONDS. 
         await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
@@ -305,7 +324,7 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         console.log('BEFORE THE CODE RUNS.');
         //NEED TO ADD THE EDIT FUNCTION HERE, LIKE pasteIntoSketchFunction OR copySketchFunction
         console.log('pasteIntoSketchFunction');
-        pasteIntoSketchFunction(editOptions9, newPage);
+        pasteIntoSketchFunction(editOptions10, newPage);
         await new Promise(resolve => setTimeout(resolve, 40000)); // Wait for 10 seconds
         console.log('Waited for 40 seconds.'); console.log('AFTER THE CODE RUNS.');
         console.log("RRRRRRRRRR")
